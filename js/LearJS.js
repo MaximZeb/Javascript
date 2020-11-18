@@ -17,7 +17,7 @@ function empty() {
 //Сам объект
 function Cars() {
 	document.getElementById("object").innerHTML = 
-	"type: "+ cars.type + " " + "marka: "+ cars.marka + " " + "model: " + cars.model + " " + "maiden: " + cars.maiden + " " + "age: " + cars.maiden;
+	" type: "+ cars.type + " " + "marka: "+ cars.marka + " " + "model: " + cars.model + " " + "maiden: " + cars.maiden + " " + "age: " + cars.maiden;
 }
 
 //
