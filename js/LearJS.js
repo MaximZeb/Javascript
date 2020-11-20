@@ -96,7 +96,15 @@ function getmilliseconds(){
 function getdate(){
 	document.getElementById("DATE").innerHTML =d.getDay();
 }
-
+function vremidni(){
+	if (new Date().getHours() < 12){
+		document.getElementById("DATE").innerHTML =" Good Mornig";
+	}else if (new Date().getHours() < 18) {
+		document.getElementById("DATE").innerHTML =" Good Day";
+	}else {
+		document.getElementById("DATE").innerHTML =" Good Evening";
+	}
+}
 
                                      //ARRAY METHOD
 
