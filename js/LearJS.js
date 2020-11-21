@@ -35,6 +35,14 @@ function THIS(){
 document.getElementById("object").innerHTML =
 cars1.fullName();
 }
+function forin() {
+	var x;
+	var text ="";
+	for (x in cars) {
+		text += cars[x] + " ";
+	}
+	document.getElementById('object').innerHTML = text;
+}
 
 
                                      //DATE
@@ -264,7 +272,7 @@ function cikle(){
 	var text ="";
 	var i;
 	for(i = 0; i < numberOne.length; i++) {
-	text += numberOne[i] + "<br>";
+	text += numberOne[i] + " ";
 	}
 document.getElementById("ALF").innerHTML = text;
 }
