@@ -34,7 +34,7 @@ function THIS(){
 				};
 document.getElementById("object").innerHTML =
 cars1.fullName();
-};
+}
 
 
                                      //DATE
@@ -240,6 +240,33 @@ function shift1() {
 }
 function unshift1() {
 	document.getElementById("ALF").innerHTML = frui.unshift("Mango");
+}
+function dlina(){
+	var z 
+	var x = frui.lenght;
+	switch (x){
+		case 0:
+		case 1:
+		case 2:
+		z = " Меньше четырех значений";
+		break;
+		case 3:
+		case 4:
+		case 5:
+		z = " Больше четырех значений";
+		break;
+		default:
+		z = "Больше семи значений, ОГО";
+	}
+document.getElementById("ALF").innerHTML = z;
+}
+function cikle(){
+	var text ="";
+	var i;
+	for(i = 0; i < numberOne.length; i++) {
+	text += numberOne[i] + "<br>";
+	}
+document.getElementById("ALF").innerHTML = text;
 }
 
                                 //MATH
