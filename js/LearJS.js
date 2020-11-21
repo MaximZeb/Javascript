@@ -43,6 +43,15 @@ function forin() {
 	}
 	document.getElementById('object').innerHTML = text;
 }
+									//STRING
+function cikleForOf() {
+		var txt = "JavaScript";
+		var x;
+		for (x of txt) {
+  			document.write(x + " ");
+}
+}
+
 
 
                                      //DATE
