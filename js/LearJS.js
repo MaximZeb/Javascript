@@ -43,6 +43,17 @@ function forin() {
 	}
 	document.getElementById('object').innerHTML = text;
 }
+//класс для объекта
+function Ccclass() {
+	class Car {
+		constructor(name, year) { 
+		this.name = name;
+		this.year = year;
+	}
+}
+let myCar = new Car("bmw", 2020);
+document.getElementById("object").innerHTML = myCar.name + " " + myCar.year;
+}
 									//STRING
 function cikleForOf() {
 		var txt = "JavaScript";
