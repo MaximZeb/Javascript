@@ -70,6 +70,14 @@ document.getElementById("object").innerHTML = myCar.name + " " + myCar.year;
 function Delete() {
 	 delete cars.type;
 }
+// Добавление функии в объект
+function AddedFunction() {
+	cars.name = function() {
+		return this.marka + " " + this.model;
+	}
+	document.getElementById("object").innerHTML = "Use-in Function " +
+	+ cars.name();
+}
 									//STRING
 function cikleForOf() {
 		var txt = "JavaScript";
