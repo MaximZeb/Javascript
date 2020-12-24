@@ -35,6 +35,7 @@ function THIS(){
 document.getElementById("object").innerHTML =
 cars1.fullName();
 }
+// перебор через цикл
 function forin() {
 	var x;
 	var text ="";
@@ -43,6 +44,7 @@ function forin() {
 	}
 	document.getElementById('object').innerHTML = text;
 }
+
 //класс для объекта
 function Ccclass() {
 	class Car {
@@ -53,6 +55,20 @@ function Ccclass() {
 }
 let myCar = new Car("bmw", 2020);
 document.getElementById("object").innerHTML = myCar.name + " " + myCar.year;
+}
+
+// добавления нового свойства
+ function added () {
+ 	cars.color = "Red";
+ 	document.getElementById("object").innerHTML = 
+	" Type: "+ cars.type + " " + "marka: "+ cars.marka + " " 
+	+ "model: " + cars.model + " " + "maiden: " + cars.maiden + " " 
+	+ "age: " + cars.maiden + " Color: " + cars.color;
+ }
+
+// удаление свойтсва с его значением
+function Delete() {
+	 delete cars.type;
 }
 									//STRING
 function cikleForOf() {
