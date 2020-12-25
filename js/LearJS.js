@@ -78,6 +78,24 @@ function AddedFunction() {
 	document.getElementById("object").innerHTML = "Use-in Function " +
 	+ cars.name();
 }
+// Отбражение объекта с values
+function valuee() {
+	var myArray = Object.values(cars);
+	document.getElementById("object").innerHTML = myArray;
+}
+function JSOoN () {
+	var myString = JSON.stringify(cars);
+	document.getElementById("object").innerHTML = myString;
+}
+function objectData () {
+	var myArrayDate = {toda: new Date()};
+	let date = JSON.stringify(myArrayDate);
+	document.getElementById("object").innerHTML = date;
+}function func () {
+	let fun = {name:" ", al:function() {return 26;}};
+	let fu = JSON.stringify(fun);
+	document.getElementById("object").innerHTML = fu;
+}
 									//STRING
 function cikleForOf() {
 		var txt = "JavaScript";
@@ -320,7 +338,10 @@ function cikle(){
 	}
 document.getElementById("ALF").innerHTML = text;
 }
-
+function strJSоONARR() {
+	let der = JSON.stringify(numberOne);
+	document.getElementById('ALF').innerHTML = der;
+}
                                 //MATH
 
 function pi(){
