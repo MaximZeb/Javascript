@@ -8,10 +8,9 @@ var cars = {
 	maiden:"Germania", 
 	age:"2020"
 };
-
 //Пустая кнопка
 function empty() {
-	document.getElementById("object").innerHTML = " "
+	document.getElementById("object").innerHTML = " ";
 }
 
 //Сам объект
@@ -96,6 +95,43 @@ function objectData () {
 	let fu = JSON.stringify(fun);
 	document.getElementById("object").innerHTML = fu;
 }
+// свойтсво get lang
+function getlang () {
+	let chbox = document.getElementById('one');
+
+	if (chbox.checked) {
+		let person = {
+			  firstName: "John",
+			  lastName : "Doe",
+			  language : "en",
+			  get lang() {
+			  	return this.language.toUpperCase();
+			  }
+			}
+			document.getElementById("object").innerHTML = person.lang;
+	} else {
+		document.getElementById('object').innerHTML = " ";
+	}
+}
+function setlang() {
+	let chbox = document.getElementById('setlang');
+
+	if(chbox.checked) {
+		let person = {
+		  firstName: "John",
+		  lastName : "Doe",
+		  language : "NO",
+		  set lang (value) {
+		  	this.language = value;
+	  }
+	};
+		person.lang = "Hey";
+		document.getElementById('object').innerHTML = person.language;
+} else {
+	document.getElementById('object').innerHTML = " ";
+}
+}
+
 									//STRING
 function cikleForOf() {
 		var txt = "JavaScript";
