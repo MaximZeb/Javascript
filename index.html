@@ -29,6 +29,8 @@
 		<label for="setlang"><input type="checkbox" id="setlang" onchange="setlang()">Set lang</label>
 		<label for="demo">Object.defineProperty</label><input type="checkbox" id="demo" onchange="define()">
 		<button onclick="cal()">вызов спомощью call</button>
+		<button onclick="objclas ()">template class object</button>
+		<button onclick="inheritance()">inherutance class object</button>
 	</div>
 </div>
 <hr>
@@ -67,6 +69,7 @@
 		<button title="возр число милесекунд" onclick="getmilliseconds()">GETMILLESEC</button>
 		<button title="возр число ень недели" onclick="getdate()">GETDAY</button>
 		<button title="Какое сейчас время дня" onclick="vremidni()">Какое сейчас время дня</button>
+		<label for="d"><input id='d' type="checkbox" onchange="clock()">clock</label>
 	</div>
 </div>
 <hr>
@@ -147,11 +150,14 @@
 	<h1>Function</h1>
 	<p id ="functionn" title="Результат"></p>
 		<div>
-			<button title="" onclick="leng()">считает длину аргументов</button>
-			<button title="" onclick=" arrow()">стрелочная функция</button>
-			<button title="" onclick="tostring()">вывод виде строки</button>
-			<button title="" onclick="str ()"></button>
+			<button title="function" onclick="leng()">считает длину аргументов</button>
+			<button title="function" onclick=" arrow()">стрелочная функция</button>
+			<button title="function" onclick="tostring()">вывод виде строки</button>
+			<button title="function" onclick="str ()"></button>
 			<label for="we"><input id="we"type="checkbox" onchange="msx()">Максимальная аргумент</label>
+			<button onclick="callbackk()">callback function</button>
+			<button onclick="AsynCallback()">Asynchoronous callback function 3 sec</button>
+			<button onclick="AsynCallbackk()">Asynchoronous callback function 3 sec</button>
 		</div>
 		<hr>
 	</div>

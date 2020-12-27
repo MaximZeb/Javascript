@@ -167,6 +167,43 @@ obj.increment;
 obj.decrement;
 document.getElementById("object").innerHTML = obj.subtract = 1;
 }
+// create to template class object
+function objclas () {
+		class Car {
+	  constructor(name, year) {
+	    this.name = name;
+	    this.year = year;
+	  }
+	}
+
+	myCar = new Car("Ford", 2014);
+	document.getElementById("object").innerHTML =
+	myCar.name + " " + myCar.year;
+}
+
+// class inheritance
+function inheritance() {
+	class Car {
+		constructor(brand) {
+			this.carname = brand;
+		}
+		present() {
+			return 'I have a '+ this.carname;
+		}
+	}
+class Model extends Car {
+	constructor(brand, mod) {
+		super(brand);
+		this.model = mod;
+	}
+	show() {
+		return this.present() + ', it is a '+ this.model;
+	}
+}
+let myCar = new Model('ford','Mustang');
+document.getElementById('object').innerHTML = 
+myCar.show();
+}
 									//STRING
 function cikleForOf() {
 		var txt = "JavaScript";
@@ -244,6 +281,29 @@ function vremidni(){
 		document.getElementById("DATE").innerHTML =" Good Day";
 	}else {
 		document.getElementById("DATE").innerHTML =" Good Evening";
+	}
+}
+// функция через чекбокс часы
+function clock () {
+	let chbox = document.getElementById('d');
+
+	if(chbox.checked) {
+		setInterval(myfunction, 1000);
+
+		function myfunction() {
+			let d = new Date();
+			document.getElementById('DATE').innerHTML = 
+			d.getHours() + ':' + 
+			d.getMinutes() + ':' +
+			d.getSeconds();
+		}
+	} else {
+		document.getElementById('DATE').innerHTML = " ";
+		setInterval(myfunction, 1);
+
+		function myfunction() {
+			document.getElementById('DATE').innerHTML = ' ';
+		}
 	}
 }
 
@@ -459,3 +519,31 @@ function msx() {
 	document.getElementById('functionn').innerHTML = findMax(4, 5, 6);
 
 }
+// callback function
+function callbackk () {
+	function mydispalyer(some) {
+		document.getElementById("functionn").innerHTML = some;
+	}
+
+	function calculator (num1, num2, myCallback) {
+		let sum = num1 + num2;
+		myCallback(sum);
+	}
+	calculator(1, 2, mydispalyer);
+}
+// функция с временем
+ function AsynCallback () {
+ 	setTimeout(myFunction, 3000);
+
+ 	function myFunction() {
+ 		document.getElementById("functionn").innerHTML = 'I love You '  ;
+ 	}
+ }
+ // функция с времением 2 вариант
+ function AsynCallbackk() {
+ 	setTimeout( function() { myfunction('I love you ');}, 3000);
+
+ 	function myfunction(value) {
+ 		document.getElementById('functionn').innerHTML = value;
+ 	}
+ }
