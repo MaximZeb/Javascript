@@ -8,6 +8,15 @@ var cars = {
 	maiden:"Germania", 
 	age:"2020"
 };
+let cars1 = {
+	fullname: function() {
+		return this.type + " " + this.marka;
+	}
+}
+function cal() {
+	let x = cars1.fullname.call(cars);
+	document.getElementById('object').innerHTML = x;
+}
 //Пустая кнопка
 function empty() {
 	document.getElementById("object").innerHTML = " ";
@@ -411,4 +420,42 @@ function pi(){
 }
 function round(){
 	document.getElementById("MATH").innerHTML = Math.round(4.4);
+}
+
+
+// FUCNTION
+function leng() {
+	function myfunction( a, b) {
+		return arguments.length;
+	}
+	document.getElementById("functionn").innerHTML = 
+	myfunction(1, 2);
+}
+
+// arrow function
+function arrow() {
+	const x = (x, y) => x * y ;
+	document.getElementById("functionn").innerHTML = 
+	x(3, 5);
+}
+function str () {
+function tostr (a, b)  {
+	return a * b ;
+}
+ document.getElementById('functionn').innerHTML = window.tostr.toString();
+}
+function msx() {
+
+	function findMax() {
+		let i;
+		let max = -Infinity;
+		for(i = 0; i < arguments.lentgh; i++){
+			if(arguments[i] > max) {
+				max = arguments[i];
+			}
+		}
+		return max;
+	}
+	document.getElementById('functionn').innerHTML = findMax(4, 5, 6);
+
 }
