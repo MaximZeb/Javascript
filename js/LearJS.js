@@ -547,3 +547,9 @@ function callbackk () {
  		document.getElementById('functionn').innerHTML = value;
  	}
  }
+// HTML DOM
+
+function changecolor() {
+	document.getElementsByClassName('color').style.color = blue;
+	
+}
