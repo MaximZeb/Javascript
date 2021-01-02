@@ -298,11 +298,11 @@ function clock () {
 			d.getSeconds();
 		}
 	} else {
-		document.getElementById('DATE').innerHTML = " ";
+		document.getElementById('DATE').innerHTML = "";
 		setInterval(myfunction, 1);
 
 		function myfunction() {
-			document.getElementById('DATE').innerHTML = ' ';
+			document.getElementById('DATE').innerHTML = '';
 		}
 	}
 }
@@ -549,7 +549,12 @@ function callbackk () {
  }
 // HTML DOM
 
-function changecolor() {
-	document.getElementsByClassName('color').style.color = blue;
-	
+function changecolor(id) {
+	id.innerHTML= "Ooops!"
+}
+function changetext(obj) {
+	obj.innerHTML = "Thank You"
+}
+function mOut(obj) {
+	obj.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptas harum explicabo animi cupiditate illum rerum earum, unde aliquid ut optio atque eum nulla sed velit dolorum qui. Temporibus, suscipit."
 }
