@@ -558,3 +558,4 @@ function changetext(obj) {
 function mOut(obj) {
 	obj.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptas harum explicabo animi cupiditate illum rerum earum, unde aliquid ut optio atque eum nulla sed velit dolorum qui. Temporibus, suscipit."
 }
+document.getElementById('addEv').addEventListener('click', function(){alert('Hello World');});
