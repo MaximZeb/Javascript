@@ -298,14 +298,10 @@ function clock () {
 			d.getSeconds();
 		}
 	} else {
-		document.getElementById('DATE').innerHTML = "";
-		setInterval(myfunction, 1);
-
-		function myfunction() {
-			document.getElementById('DATE').innerHTML = '';
-		}
+		
 	}
-}
+	}
+
 
                                      //ARRAY METHOD
 
