@@ -1,5 +1,4 @@
-                                                  //OBJECT
-"use strict"                     
+                                                  //OBJECT     
 // Explames
 var cars = {
 	type:"moto", 
@@ -555,3 +554,62 @@ function mOut(obj) {
 	obj.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptas harum explicabo animi cupiditate illum rerum earum, unde aliquid ut optio atque eum nulla sed velit dolorum qui. Temporibus, suscipit."
 }
 document.getElementById('addEv').addEventListener('click', function(){alert('Hello World');});
+
+
+// AJAX
+// json фейковый 
+const requesURL = 'https://jsonplaceholder.typicode.com/users';
+// GET
+function sendREquest (method, url)  {
+	return new Promise ((resolve, reject) => {
+		const xhr = new XMLHttpRequest();
+
+	xhr.open(method, url);
+	xhr.pesponseType ="json"; 
+	xhr.onload = () => {
+		if (xhr.status >= 400) {  // это проверяет на ошибки больше 400 401 404 ошибки
+			reject(xhr.response);
+		} else {
+			resolve(xhr.response);
+		}
+		console.log(xhr.response); 
+	}
+	xhr.onerror = () => {
+		reject(xhr.response); // ошибки в сети 
+	}
+	xhr.send();
+	})
+}
+sendREquest ('GET', requesURL)
+	.then(data => console.log(data))
+	.catch(err => console.log(err)) 
+// POST 
+function senDREquest (method, url, body = null)  {
+	return new Promise ((resolve, reject) => {
+		const xhr = new XMLHttpRequest();
+
+	xhr.open(method, url);
+	xhr.pesponseType ="json"; 
+	xhr.setReauestHeadr('Content-type', 'application/json')
+	xhr.onload = () => {
+		if (xhr.status >= 400) {  // это проверяет на ошибки больше 400 401 404 ошибки
+			reject(xhr.response);
+		} else {
+			resolve(xhr.response);
+		}
+		console.log(xhr.response); 
+	}
+	xhr.onerror = () => {
+		reject(xhr.response); // ошибки в сети 
+	}
+	xhr.send(JSON.stringify(body));
+	})
+}
+const body = {
+	name: 'Zebzeev',
+	age: 26
+};
+
+senDREquest ('POST', requesURL, body)
+	.then(data => console.log(data))
+	.catch(err => console.log(err)) 
