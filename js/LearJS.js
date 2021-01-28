@@ -542,7 +542,7 @@ function callbackk () {
  		document.getElementById('functionn').innerHTML = value;
  	}
  }
-// HTML DOM
+							// HTML DOM
 
 function changecolor(id) {
 	id.innerHTML= "Ooops!"
@@ -554,7 +554,14 @@ function mOut(obj) {
 	obj.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptas harum explicabo animi cupiditate illum rerum earum, unde aliquid ut optio atque eum nulla sed velit dolorum qui. Temporibus, suscipit."
 }
 document.getElementById('addEv').addEventListener('click', function(){alert('Hello World');});
+const input = document.querySelector('#input');
+const log = document.getElementById('log');
 
+input.addEventListener('keyup', logKey);
+
+function logKey (e) {
+  log.textContent += ` ${e.code}`;
+}
 
 // AJAX
 // json фейковый 
