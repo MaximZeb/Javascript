@@ -563,7 +563,34 @@ function logKey (e) {
   log.textContent += ` ${e.code}`;
 }
 
-// AJAX
+// меняет ширину
+const congo = document.querySelector('.go');
+
+let widthcon = 150;
+
+
+function sizeWMI () {
+	widthcon = widthcon - 10;
+	congo.style.width = widthcon + "px";
+}
+
+function sizeWPL ()  {
+	widthcon = widthcon + 10;
+	congo.style.width = widthcon + "px";
+}
+
+function pressCon (e) {
+	if (e.keyCode === 39) {
+		sizeWPL ();
+	} else if (e.keyCode === 37) {
+		sizeWMI ();
+	}
+}
+
+document.addEventListener('keyup', pressCon);
+
+
+							// AJAX
 // json фейковый 
 let ajax = () => {
 const requesURL = 'https://jsonplaceholder.typicode.com/users';
