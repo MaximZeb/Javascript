@@ -478,7 +478,7 @@ function round(){
 }
 
 
-// FUCNTION
+									// FUNCTION
 function leng() {
 	function myfunction( a, b) {
 		return arguments.length;
@@ -542,7 +542,7 @@ function callbackk () {
  		document.getElementById('functionn').innerHTML = value;
  	}
  }
-							// HTML DOM
+								// HTML DOM
 
 function changecolor(id) {
 	id.innerHTML= "Ooops!"
@@ -565,7 +565,14 @@ function logKey (e) {
 
 // меняет ширину
 const congo = document.querySelector('.go');
+const coeffb = document.querySelector('.tyfghqwrfg')
 
+function pdfp () {
+	congo.classList.add('gsaeg');
+}
+function epfgd () {
+	congo.classList.remove('gsaeg');
+}
 let widthcon = 150;
 
 
