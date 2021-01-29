@@ -570,13 +570,19 @@ let widthcon = 150;
 
 
 function sizeWMI () {
+	if (widthcon > 0){
 	widthcon = widthcon - 10;
 	congo.style.width = widthcon + "px";
+	} else {
+
+	}
 }
 
 function sizeWPL ()  {
+	if (widthcon < window.screen.width) {
 	widthcon = widthcon + 10;
 	congo.style.width = widthcon + "px";
+	}
 }
 
 function pressCon (e) {
