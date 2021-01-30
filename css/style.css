@@ -1,24 +1,30 @@
-body {
+body 
+{
 	font-family: "Times New Roman";
-	background-color: ligthpink;
+	
 }
-#object {
+#object 
+{
 	border: 1px solid black;
 	border-radius:5px;
 }
-#DATE {
+#DATE 
+{
 	border: 1px solid black;
 	border-radius:5px;
 }
-#ALF {
+#ALF 
+{
 	border: 1px solid black;
 	border-radius:5px;
 }
-#MATH {
+#MATH 
+{
 	border: 1px solid black;
 	border-radius:5px;
 }
-#boolean {
+#boolean 
+{
 	border: 1px solid black;
 	border-radius:5px;
 }
